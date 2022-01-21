@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="title">Enregistrement</div>
-        <form action="#" method="post">
+        <form action="controllers/Controller.php" method="post">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Nom</span>
@@ -18,11 +18,11 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Postnom</span>
-                    <input type="text" name="postnom" placeholder="Entrer votre postnom" required>
+                    <input type="text" name="lastname" placeholder="Entrer votre postnom" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Prenom</span>
-                    <input type="text" name="prenom" placeholder="Entrer votre prenom" required>
+                    <input type="text" name="firstname" placeholder="Entrer votre prenom" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Matricule</span>
@@ -39,9 +39,9 @@
             </div>
             <div class="gender-details">
                 <div class="gender-title">Genre</div>
-                <input type="radio" name="gender" id="dot-1" checked>
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
+                <input type="radio" name="mal" id="dot-1">
+                <input type="radio" name="femal" id="dot-2">
+                <input type="radio" name="nothing" id="dot-3">
                 <div class="category">
                     <label for="dot-1">
                         <span class="dot one"></span>
@@ -62,42 +62,6 @@
             </div>
         </form>
     </div>
-    <!--form method="post" action="#">
-        <table>
-            <tr>
-                <td>Nom</td>
-                <td><input type="text" name="nom" placeholder="muteba"></td>
-            </tr>
-            <tr>
-                <td>Postnom</td>
-                <td><input type="text" name="postnom" placeholder="muleshi"></td>
-            </tr>
-            <tr>
-                <td>Prenom</td>
-                <td><input type="text" name="prenom" placeholder="josh"></td>
-            </tr>
-            <tr>
-                <td>Matricule</td>
-                <td><input type="text" name="matricule" placeholder="22mm001"></td>
-            </tr>
-            <tr>
-                <td>Genre</td>
-                <td><input type="radio" name="homme" value="M" checked> M
-                <input type="radio" name="femme" value="F"> F</td>
-            </tr>
-            <tr>
-                <td>Promotion</td>
-                <td><input type="text" name="promotion" placeholder="l2gl"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="email" name="email" placeholder="joshm@gmail.com"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="button" name="envoyer" value="Envoyer"></td>
-            </tr>
-        </table>
-    </form-->
 </body>
 </html>
 
