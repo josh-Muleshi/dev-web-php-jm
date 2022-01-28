@@ -17,12 +17,11 @@
             $_SESSION['con'][] = [$nom, $email, $pwd];
 
             foreach($_SESSION['con'] as $c){
-                echo 'Nom : ' .$c[0];
-                echo ' email : ' .$c[1];
+                echo 'Nom : ' .$c[0]. ' email : ' .$c[1];
                 echo '<br><hr>';
             }
         }
-        
+
     }else{
         echo 'Desole cette clef n\'existe pas';
     }
