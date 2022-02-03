@@ -33,10 +33,10 @@
             echo '<br><hr>';
         }
 
-        
-
     }else{
         echo '<h3 style="color:red">Qte invalide</h3>';
     }
 
     //echo $qte > 0 ? "Total : ". $qte * $pu ." Fc" : '<h3 style="color:red">Qte invalide</h3>';
+
+    
