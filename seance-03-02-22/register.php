@@ -5,20 +5,28 @@
         $email = $_POST['email'];
         $tel = $_POST['tel'];
         $pwd = $_POST['pwd'];
+        $gender = $_POST['gender'];
 
         if(empty($name) || empty($email) || empty($tel) || empty($pwd)){
             echo "$name, $email,$tel or $pwd is empty";
         }else{
 
-            $_SESSION['connexion'] = [
-                $name, 
-                $email, 
-                $tel, 
-                $pwd
+            $_SESSION['connexion'][] = [
+                'name' => $name, 
+                'email' => $email, 
+                'tel' => $tel, 
+                'pwd' => $pwd,
+                'gender' => $gender
             ];
-            
-            header("Location: profil.php");
-            exit();
+
+            foreach($_SESSION['connexion'] as $key => $a){
+                if ($email == $a['email'] && $pwd == $a['pwd']) {
+                    $_SESSION['con'] = $key;
+                    header("Location: profil.php");
+                    exit();
+                    break;
+                }
+            }
         }
 
     }else{

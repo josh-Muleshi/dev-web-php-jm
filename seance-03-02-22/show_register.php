@@ -13,8 +13,8 @@
         Tel : <input type="tel" name="tel" placeholder="numero tel" required><br>
         Mot de passe : <input type="password" name="pwd" placeholder="Entrez le mdp" required><br>
         Genre : <select name="gender">
-            <option value="man">H</option>
-            <option value="woman">F</option>
+            <option value="M">Homme</option>
+            <option value="F">Femme</option>
         </select><br>
         <input type="submit" value="Enregistrer">
     </form>
