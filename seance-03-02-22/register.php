@@ -1,4 +1,7 @@
 <?php
+/**
+ * le lancement de la session
+ */
     session_start();
     if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['pwd']) && isset($_POST['gender'])) {
         $name = $_POST['name'];
