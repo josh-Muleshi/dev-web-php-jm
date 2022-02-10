@@ -11,7 +11,7 @@
         $gender = $_POST['gender'];
 
         if(empty($name) || empty($email) || empty($tel) || empty($pwd)){
-            echo "$name, $email,$tel or $pwd is empty";
+            echo "$name, $email, $tel or $pwd is empty";
         }else{
 
             $_SESSION['connexion'][] = [

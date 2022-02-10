@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    $key = $_SESSION['con'];
+    if(!empty($key)){
+        header('location: profil.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,21 +24,23 @@
 </body>
 </html>
 <?php
-
     if (isset($_POST['submit'])){
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
-
-        foreach($_SESSION['connexion'] as $key => $a){
-            if ($email == $a['email'] && $pwd == $a['pwd']) {
-                $_SESSION['con'] = $key;
-                header("Location: profil.php");
-                exit();
-                break;
+        
+        try{
+            foreach($_SESSION['connexion'] as $key => $a){
+                if ($email == $a['email'] && $pwd == $a['pwd']) {
+                    $_SESSION['con'] = $key;
+                    header("Location: profil.php");
+                    exit();
+                    break;
+                }
+                else{
+                    echo "<script>alert('login or password incorrect.')</script>";
+                }
             }
-            else{
-                echo "<script>alert('login or password incorrect.')</script>";
-            }
+        }catch(Exception $e){
+            echo 'aucun user enregistrer'. $e->getMessage();
         }
-
     }
