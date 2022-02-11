@@ -1,13 +1,12 @@
 <?php
     
-    function jdm(bool $r): array{
-        $tab = $_SESSION['register'][] = [
-            'name' => "josue", 
-            'email' => "muleshi@gmail.com", 
-            'tel' => "456", 
-            'pwd' => "456",
-            'gender' => "M"
-        ];
-
-        return $tab;
+    function admin(bool $r): array{
+        
+        return $_SESSION['register'][] = [
+            'name' => 'josh',
+            'email' => 'jmuleshi2@gmail.com', 
+            'tel' => '456', 
+            'pwd' => '1234567',
+            'gender' => 'M'
+        ]; 
     }

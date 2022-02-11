@@ -11,7 +11,7 @@
     echo 'Tel: '.$_SESSION['register'][$key]['tel'].'<br>';
     echo 'Genre: '.$_SESSION['register'][$key]['gender'].'<br>';
 
-    //session_destroy();
+    session_destroy();
 
     
 

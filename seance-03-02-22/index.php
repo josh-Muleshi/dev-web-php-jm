@@ -2,7 +2,7 @@
     $r = session_start();
     require('admin.php');
 
-    jdm($r);
+    admin($r);
 
     if($_SESSION['connect'] != []){
         header('Location: profil.php');
@@ -20,8 +20,12 @@
 <body>
     <form action="login.php" method="post">
         Email : <input type="email" name="email" placeholder="Entrez l'email" required><br>
-        Password : <input type="password" name="pwd" placeholder="Entrez le mdp" required><br>
-        <?= (!empty($_GET['error'])? $_GET['error']: "")?><br>
+        Password : <input type="password" name="pwd" placeholder="Entrez le mdp" required>
+
+        <div style="color: red;">
+            <?= (!empty($_GET['error'])? $_GET['error']: "")?>
+        </div>
+
         <input type="submit" name="submit" value="Connexion">
     </form>
     <a href="show_register.php">Creer un compte</a>

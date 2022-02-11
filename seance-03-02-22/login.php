@@ -14,7 +14,5 @@
             header("Location: ./profil.php");
             break;
         }
-        header("Location: ./index.php?error='login_or_password_incorrect.'");
+        header("Location: ./index.php?error=login or password incorrect");
     }
-
-    
