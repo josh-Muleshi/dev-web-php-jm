@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if($_SESSION['connect'] != []){
+        header('Location: profil.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
