@@ -1,5 +1,9 @@
 <?php
-    session_start();
+    $r = session_start();
+    require('admin.php');
+
+    jdm($r);
+
     if($_SESSION['connect'] != []){
         header('Location: profil.php');
     }
